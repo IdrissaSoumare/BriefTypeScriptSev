@@ -5,10 +5,7 @@ You will have to find the following information and test them as you go along in
 ## Level 1
 
 - Which are the different primitive data types in TypeScript?
-=> lowercase number , string, boolean.
-ex : let exemple : number = 3;
-ex : let exemple1 : string = "Hello World";
-ex : let exemple2 : boolean = true;
+=> lowercase number , string, boolean, bigint, symbol, null, undefined.
 
 - How to type an Array?
 =>Using square brackets
@@ -65,12 +62,25 @@ In Typescript, by default, the visibility of all properties or methods in Typesc
 ## Level 3
 
 - How to split our program into different files? (e.g. a class in a file that I import into another)
+step 1 : Create Separate TypeScript Files
+step 2 : Import Class in Another File ( import {car} from './car')
+
 - What is the `export` keyword?
+The specification of the EXPORT keyword allows a globally defined data structure or standalone field defined within a module to be used by another module in the program.
+
 - What is the `import` keyword?
+
 - What's inheritance?
+Inheritance is an aspect of OOPs languages, which provides the ability of a program to create a new class from an existing class. It is a mechanism which acquires the properties and behaviors of a class from another class. 
+
 - How to call the constructor of a parent class?
+using this syntax : super ();
+
 - How to call a method of a parent class?
+using this syntax : super.
+
 - What is polymorphism?
+
 
 **🎉🎉🎉Update the Github Project board🎉🎉🎉**
 
