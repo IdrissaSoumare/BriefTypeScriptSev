@@ -1,60 +1,22 @@
-import { HeroSword } from "./heroSword";
+
+// import de la classe Hero
 import { Hero } from "./hero";
 
-
-const vegeta = new Hero("vegeta", 10, 50);   //instanciation des 2 objets, soit : vegeta et sangoku
+//instanciation des 2 objets, soit : vegeta et sangoku
+const vegeta = new Hero("vegeta", 10, 60);
 const sangoku = new Hero("sangoku", 10, 50);
 
-
-const attaque = vegeta.attack(sangoku)
-const attaque2 = sangoku.attack(vegeta)
-
+// boucle où les 2 combattants s'affrontent et le vainqueur s'affiche en fontion de sa puissance et de ses vies restantes.
 while (sangoku.isAlive() && vegeta.isAlive()) {
-    vegeta.attack(sangoku)
-    sangoku.attack(vegeta)
+    vegeta.attack(sangoku);
+    sangoku.attack(vegeta);
     if (!sangoku.isAlive() && vegeta.isAlive()) {
         console.log("vegeta is the winner");
     } else if (sangoku.isAlive() && !vegeta.isAlive()) {
         console.log("sangoku is the winner");
-
-    } else if (!sangoku.isAlive() && !vegeta.isAlive()) {
+    } else {
         console.log("It's a draw");
-
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*const cell = new HeroSword("kame", 100, 100);
-const sangohan = new HeroSword("Haricots", 100, -10);
-cell.attack(sangohan);
-console.log(sangohan.isAlive());*/
-
-
-sangoku.attack(vegeta);   // sangoku attaque vegeta*/
-
-
-//console.log(vegeta.isAlive());
-///////////////////////////////
 

@@ -1,5 +1,4 @@
 import { Weapon } from "./weapon";
-import { HeroSword } from "./heroSword";
 export class Hero {
     private name: string;     //déclaration de classe avec 3 attributs
     private power: number;    //declaration avec private qui implique que ces infos ne sont accessibles que dans cette classe
@@ -12,15 +11,13 @@ export class Hero {
         this.name = name;
         this.power = power;
         this.life = life;
-
-
     }
-    // 1ere methode, attaque : si l'ennemi est en vie, on lui enlève de la puissance
+    // 1ere methode 'attaque' : si l'ennemi est en vie, on lui enlève de la puissance
     attack(opponent: Hero): void {
 
         opponent.life -= this.power;
     }
-    // 2eme methode, est en vie : pour verifier si le combattant est tjrs en vie
+    // 2eme methode 'est en vie' : pour verifier si le combattant est tjrs en vie
     isAlive() {
         if (this.life > 0) {
             return true;
@@ -28,6 +25,8 @@ export class Hero {
             return false;
         }
     }
+
+    // les 3 méthodes getter/setter permettant aux différentes classes d'accéder aux attributs privés de la classe Hero
     get puis(): number {
         return this.power;
     }
@@ -35,19 +34,17 @@ export class Hero {
         this.power = pow;
     }
     ///////////
-    get Power(): number {
-        return this.power;
+    get appelation(): string {
+        return this.name;
     }
-    set Power(pow: number) {
-        this.power = pow;
+    set appelation(ape: string) {
+        this.name = ape;
     }
     ///////////
-    get puissance(): number {
+    get restant(): number {
         return this.power;
     }
-    set puisance(pow: number) {
-        this.power = pow;
+    set restant(res: number) {
+        this.life = res;
     }
-
-
 }
